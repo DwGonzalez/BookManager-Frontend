@@ -16,4 +16,11 @@ export const routes: Routes = [
         './presentation/pages/book/book-details/book-details.component'
       ).then((c) => c.BookDetailsComponent),
   },
+  {
+    path: 'books/add',
+    loadComponent: () =>
+      import(
+        './presentation/pages/book/book-add-edit-create/book-add-edit-create.component'
+      ).then((c) => c.BookAddEditCreateComponent),
+  },
 ];
