@@ -37,4 +37,11 @@ export const routes: Routes = [
         './presentation/pages/author/author-add-edit-create/author-add-edit-create.component'
       ).then((c) => c.AuthorAddEditCreateComponent),
   },
+  {
+    path: 'authors/:id/:action',
+    loadComponent: () =>
+      import(
+        './presentation/pages/author/author-details/author-details.component'
+      ).then((c) => c.AuthorDetailsComponent),
+  },
 ];
