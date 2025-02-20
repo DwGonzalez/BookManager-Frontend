@@ -9,4 +9,11 @@ export const routes: Routes = [
         (c) => c.BookListComponent
       ),
   },
+  {
+    path: 'books/:id/:action',
+    loadComponent: () =>
+      import(
+        './presentation/pages/book/book-details/book-details.component'
+      ).then((c) => c.BookDetailsComponent),
+  },
 ];
